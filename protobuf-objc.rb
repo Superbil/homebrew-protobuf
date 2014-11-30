@@ -15,6 +15,8 @@ class ProtobufObjc < Formula
 
   def install
     ENV.prepend 'CXXFLAGS', '-DNDEBUG'
+    ENV.append "CPPFLAGS", "-I#{Formula["protobuf250"].include}"
+
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
     system "make install"
