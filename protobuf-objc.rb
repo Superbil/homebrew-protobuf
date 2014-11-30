@@ -14,8 +14,10 @@ class ProtobufObjc < Formula
   depends_on 'protobuf250'
 
   def install
+    protobuf = Formula["protobuf250"]
     ENV.prepend 'CXXFLAGS', '-DNDEBUG'
-    ENV.append "CPPFLAGS", "-I#{Formula["protobuf250"].include}"
+    ENV.append "LDFLAGS", "-L#{protobuf.lib}"
+    ENV.append "CPPFLAGS", "-I#{protobuf.include}"
 
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking"
