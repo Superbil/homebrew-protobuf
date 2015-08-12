@@ -3,7 +3,7 @@ require 'formula'
 class ProtobufObjc < Formula
   homepage 'https://github.com/Superbil/protobuf-objc'
   url 'https://github.com/Superbil/protobuf-objc.git'
-  sha1 '5655da9689e2fc1784d5cc5c770e5f4fb54a2bee'
+  sha1 'cf2eca908a8f171359df6c54acb70e0c098bcab1'
 
   head 'https://github.com/Superbil/protobuf-objc.git', :branch => 'develop'
 
