@@ -3,13 +3,13 @@ require 'formula'
 class ProtobufObjc < Formula
   homepage 'https://github.com/Superbil/protobuf-objc'
   url 'https://github.com/Superbil/protobuf-objc.git'
-  sha1 'cf2eca908a8f171359df6c54acb70e0c098bcab1'
+  sha256 'cf2eca908a8f171359df6c54acb70e0c098bcab1'
 
   head 'https://github.com/Superbil/protobuf-objc.git', :branch => 'develop'
 
-  depends_on :autoconf
-  depends_on :automake
-  depends_on :libtool
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
 
   depends_on 'protobuf250'
 
